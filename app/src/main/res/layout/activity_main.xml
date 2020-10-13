@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_margin="20dp"
+    tools:context=".MainActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:orientation="horizontal">
+        <ImageButton
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/left"
+            android:id="@+id/left"
+            android:onClick="moveLeft"
+            tools:ignore="OnClick" />
+        <ImageView
+            android:layout_margin="5dp"
+            android:layout_width="0dp"
+            android:layout_weight="10"
+            android:layout_height="match_parent"
+            android:id="@+id/iv" />
+
+        <ImageButton
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:src="@drawable/right"
+            android:layout_height="match_parent"
+            android:id="@+id/right"
+            android:onClick="moveRight"/>
+
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:text=""
+        android:textSize="20dp"
+        android:textAlignment="center"
+        android:id="@+id/imageno" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:text="TAG"
+            android:textAlignment="center"
+            android:textSize="25dp"
+            android:background="#CCCC00"
+            android:layout_height="50dp"/>
+        <EditText
+            android:layout_width="0dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:text=""
+            android:textSize="25dp"
+            android:id="@+id/tag"
+            android:layout_height="50dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_margin="5dp"
+            android:text="SIZE"
+            android:textAlignment="center"
+            android:textSize="25dp"
+            android:background="#CCCC00"
+            android:layout_height="50dp"/>
+        <EditText
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_marginTop="10dp"
+            android:text=""
+            android:textSize="25dp"
+            android:id="@+id/size"
+            android:layout_height="50dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:orientation="horizontal">
+        <Button
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_margin="5dp"
+            android:text="SAVE"
+            android:background="#FFB2FF"
+            android:id="@+id/save"
+            android:onClick="savePhoto"
+            android:layout_height="50dp" />
+        <Button
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_margin="5dp"
+            android:text="LOAD"
+            android:background="#FFB266"
+            android:id="@+id/load"
+            android:onClick="loadPhotos"
+            android:layout_height="50dp" />
+    </LinearLayout>
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_margin="5dp"
+        android:layout_height="50dp"
+        android:text="CAPTURE"
+        android:onClick="takeSnap"
+        android:background="@color/colorAccent"
+        android:id="@+id/capture" />
+
+</LinearLayout>
